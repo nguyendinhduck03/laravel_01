@@ -122,29 +122,22 @@
                                     <figure>
                                         <div class="product_thumb">
                                             @if ($product->imageproduct->first())
-                                                <a href="single-product.html">
+                                                <a href="{{route('detail.product', $product->id)}}">
                                                     <div class="image-container">
                                                         <img src="{{ Storage::url($product->imageproduct->first()->link) }}" alt="">
                                                     </div>
                                                 </a>
                                             @else
-                                                <a href="single-product.html">
+                                                <a href="{{route('detail.product', $product->id)}}">
                                                     <div class="image-container">
                                                         <img src="path/to/default-image.jpg" alt="">
                                                     </div>
                                                 </a>
                                             @endif
-                                            <div class="action_links">
-                                                <ul class="d-flex justify-content-center">
-                                                    <li class="add_to_cart"><a href="#" title="Add to cart">
-                                                        <span class="pe-7s-shopbag"></span></a></li>
-                                                    <li class="wishlist"><a href="#" title="Add to Wishlist"><span class="pe-7s-like"></span></a></li>
-                                                    <li class="quick_button"><a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#modal_box"> <span class="pe-7s-look"></span></a></li>
-                                                </ul>
-                                            </div>
+                                          
                                         </div>
                                         <figcaption class="product_content">
-                                            <h4 class="product_name"><a href="#">{{ $product->name }}</a></h4>
+                                            <h4 class="product_name"><a href="{{route('detail.product', $product->id)}}">{{ $product->name }}</a></h4>
                                             <p class="product_price" style="color: red">{{ $product->price." VND" }}</p>
                                         </figcaption>
                                     </figure>

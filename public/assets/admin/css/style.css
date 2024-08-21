@@ -1,0 +1,83 @@
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    background-color: #343a40; /* Dark background for sidebar */
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.sidebar h4 {
+    color: #f8f9fa;
+}
+.sidebar .nav-link {
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+.sidebar .nav-link.active, .sidebar .nav-link:hover {
+    color: #ffffff;
+    background-color: #495057;
+}
+.sidebar .nav .nav-link .nav-link {
+    color: #ced4da;
+}
+.sidebar .submenu {
+    display: none;
+    overflow: hidden;
+    background-color: #495057;
+    padding-left: 15px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+}
+.sidebar .submenu.show {
+    display: block;
+    max-height: 300px; /* Adjust as needed */
+    opacity: 1;
+}
+.submenu .nav-link {
+    color: #ced4da;
+}
+.submenu .nav-link:hover {
+    color: #ffffff;
+}
+.content {
+    margin-left: 20%;
+    padding: 20px;
+    background-color: #f8f9fa; /* Lighter background for content */
+}
+.btn {
+    border-radius: 0.25rem; /* Rounded corners for buttons */
+}
+
+.action-link {
+    color: #007bff;
+    text-decoration: none;
+}
+.action-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+.table {
+    margin-top: 20px;
+}
+.table thead {
+    background-color: #f8f9fa;
+}
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+.no-border {
+    border: none !important;
+}
+.filter-form {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.table th, .table td {
+    border-top: none;
+}

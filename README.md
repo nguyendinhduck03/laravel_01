@@ -13,3 +13,4 @@ MÔ TẢ CHI TIẾT DỰ ÁN CÁ NHÂN
             -  Thêm, sửa, xóa, xóa mềm Danh mục, Sản phẩm, Tài khoản, Bình luận, Đơn hàng.
         + Khác: 
             - validate dữ liệu, middleware để xử lý request
+            - API cho table blogs

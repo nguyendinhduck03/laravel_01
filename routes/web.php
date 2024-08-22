@@ -53,6 +53,8 @@ Route::prefix('/')->group(function () {
     Route::post('checkout', [PurchaseController::class, 'checkout'])->name('checkout')->middleware('checkuser');
     Route::post('odder-completed', [PurchaseController::class, 'order'])->name('order.completed')->middleware('checkuser');
     Route::get('congratulations', [PurchaseController::class, 'congratulations'])->name('congratulations');
+
+    Route::get('test-email', [HomeController::class, 'testEmail']);
     
 });
 

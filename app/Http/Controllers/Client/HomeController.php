@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers\Client;
 
-use App\Models\DetailOrder;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Comment;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\DetailOrder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
@@ -121,6 +122,14 @@ class HomeController extends Controller
         $order->status_order_id = 3;
         $order->save();
         return redirect()->back();
+    }
+    
+    public function testEmail() {
+        $name = 'Nguyễn Đình Đức';
+        Mail::send('emails.test', compact('name'), function($email) use($name){
+            $email->subject('Test send email');
+            $email->to('doyouknowkun21@gmail.com', $name);
+        });
     }
     
 

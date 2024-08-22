@@ -62,7 +62,7 @@ Route::prefix('admin')->middleware('checkadmin')->group(function () {
     Route::resource('products', ProductController::class);
     Route::get('product-trash', [ProductController::class, 'trash'])->name('products.trash');
     Route::get('product-trash/{id}/restore', [ProductController::class, 'restore'])->name('products.restore');
-    Route::get('product-trash/{id}/forceDelete', [ProkductController::class, 'forceDelete'])->name('products.forceDelete');
+    Route::get('product-trash/{id}/forceDelete', [ProductController::class, 'forceDelete'])->name('products.forceDelete');
 
     Route::resource('categories', CategoryController::class)->except(['show']);
 
